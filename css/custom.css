@@ -12226,4 +12226,11 @@ a.sidebar-link:hover {
 .bg-modify {
   background-color: #FF6900;
   color: white;
-}/*# sourceMappingURL=custom.css.map */
+}
+.custom-confirm-button
+{
+  border-color: #FF6900;
+  background-color: #FF6900;
+}
+
+/*# sourceMappingURL=custom.css.map */
