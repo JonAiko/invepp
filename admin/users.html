@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
+    <title>Invepp | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+</head>
+
+<body class="wrapper">
+    <div id="sidebar" class="menu expand">
+        <div class="d-flex" style="margin: auto; margin-top: 16px; margin-bottom: 11px">
+            <div class="sidebar-logo">
+                <img src="../img/logo_sa.png" class="img-fluid img-xl" alt="imagenl logo" />
+            </div>
+        </div>
+        <hr class="sidebar-divider" />
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider" />
+            <div class="sidebar-heading">Gestion</div>
+            <li class="sidebar-item">
+                <a href="list.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Usuarios</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="roles.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-hammer"></i>
+                    <span>Roles</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="bodega.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Bodegas</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="areas.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Areas</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <span>Articulos</span>
+                </a>
+                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none">Login</a>
+                    </li>
+                </ul>
+            </li>
+            <hr class="sidebar-divider" />
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-link text-decoration-none">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Cerrar Sesion</span>
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <nav class="shadow navbar navbar-expand px-4 py-3 bg-modify-secondary">
+            <button class="toggle-btn" id="toggle-btn" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="nav-item dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
+                            <div class="flex-column">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jonathan</span>
+                                <img src="../img/profile.svg" class="avatar img-fluid"
+                                    alt="icono de usuario" />
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end rounded dropdown-menu-config"
+                            style="margin-top: 19px">
+                            <li>
+                                <h6 class="dropdown-header">Acciones:</h6>
+                            </li>
+                            <a class="dropdown-item" href="#">Mi perfil</a>
+                            <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="context px-3 py-4" style="height: 100%">
+            <section class="container-fluid">
+                <div class="mb-3">
+                    <h3 class="fs-4 mb-3">Gestion de Usuarios</h3>
+                </div>
+                <!--Contenido-->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Total de Usuarios
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            54
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa-solid fa-user fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Usuarios Confirmados
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Usuarios Inactivos
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            33
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Usuarios Deshabilitados
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            40
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-user-secret fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 pt-5">
+                        <div class="card">
+                            <div class="card-header py-3 d-flex justify-content-between">
+                                <h5 class="m-0 font-weight-bold text-modify-primary">
+                                    Listado de Usuarios
+                                </h5>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
+                                    <i class="fa-solid fa-plus"> </i> Agregar
+                                </button>
+                            </div>
+                            <div class="card-body py-3 table-responsive">
+                                <table class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col" class="">Nombre</th>
+                                            <th scope="col">Empresa</th>
+                                            <th scope="col">Area</th>
+                                            <th scope="col">Cargo</th>
+                                            <th scope="col">
+                                                Estado
+                                                <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    data-bs-title="Muestra el estado de los usuarios"></i>
+                                            </th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td scoope="col" class="">Jonathan</td>
+                                            <td>Kal Tire S.A</td>
+                                            <td>Finance & IT</td>
+                                            <td>Asistente TI</td>
+                                            <td style="padding-left: 1.5em">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckChecked" checked  onclick="guardar()"/>
+                                                    <label class="form-check-label"
+                                                        for="flexSwitchCheckChecked"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success"
+                                                    data-bs-placement="top"
+                                                    data-bs-title="Ver informacion de usuario" data-bs-toggle="modal" data-bs-target="#ViewUser">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-secondary"                                                   
+                                                    data-bs-placement="top"
+                                                    data-bs-title="Modifcar Persmisos del usuario" >
+                                                    <i class="fa-solid fa-gears"></i>
+                                                </button>
+
+                                                <button class="btn btn-sm btn-warning text-white"
+                                                     data-bs-placement="top"
+                                                    data-bs-title="Modificar datos del usuario" data-bs-toggle="modal" data-bs-target="#EditUser">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Contenido-->
+                <!-- Modals-->
+                    <!--Add User-->
+                    <div class="modal fade" id="AddUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="AddUser" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario Registro de Usuarios</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nickname:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico">
+                                            </div>
+                                        </div>
+                                
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Rut:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-passport"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='rut'
+                                                    placeholder="Ingrese el rut" aria-label="rut" data-toggle="tooltip"
+                                                    title="Este es el rut del usuario y debera ser unico">
+                                            </div>
+                                        </div>            
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-id-card-clip"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='name'
+                                                    placeholder="Ingrese el Nombre" aria-label="name" data-toggle="tooltip"
+                                                    title="Este es el Nombre del usuario">
+                                            </div>
+                                        </div>       
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Apellido:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-id-card-clip"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='lastname'
+                                                    placeholder="Ingrese el Apellido" aria-label="lastname" data-toggle="tooltip"
+                                                    title="Este es el Apellido del usuario">
+                                            </div>
+                                        </div>        
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Email:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-at"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='email'
+                                                    placeholder="Ingrese el Email" aria-label="email" data-toggle="tooltip"
+                                                    title="Este es el email del usuario y debera ser unico">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Password:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-lock"></i>
+                                                </div>
+                                                <input type="password" class="form-control" maxlength="10" wire:model='password'
+                                                    placeholder="Ingrese la Contraseña" aria-label="password" data-toggle="tooltip"
+                                                    title="Contraseña del usuario">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Repetir Password:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-lock"></i>
+                                                </div>
+                                                <input type="password" class="form-control" maxlength="10" wire:model='password2'
+                                                    placeholder="Ingrese la Contraseña" aria-label="password2" data-toggle="tooltip"
+                                                    title="Contraseña del usuario">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Empresa:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-building"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected" wire:model='company'>
+                                                    <option selected>Seleccione la Empresa</option>
+                                
+                                                        <option value="{{ $company->id }}">Kaltire S.A</option>
+                                                        <option value="{{ $company->id }}">Kaltire RNG</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Cargo:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user-tie"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected" wire:model='position'>
+                                                    <option selected class="text-gray-500">Seleccione el cargo</option>
+                                                        <option value="1">position 1</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Add User-->
+                    <!--view user-->
+                    <div class="modal fade" id="ViewUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="ViewUser" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ViewUser">Detalles del Usuario</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nickname:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico" value="JonRave97" disabled>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-id-card-clip"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='name'
+                                                    placeholder="Ingrese el Nombre" aria-label="name" data-toggle="tooltip"
+                                                    title="Este es el Nombre del usuario" value="Jonathan Ramos Velasquez" disabled>
+                                            </div>
+                                        </div>             
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Email:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-at"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='email'
+                                                    placeholder="Ingrese el Email" aria-label="email" data-toggle="tooltip"
+                                                    title="Este es el email del usuario y debera ser unico" value="jonathan_ramos@kaltire.com" disabled>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Fecha de Creacion:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-calendar"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" 
+                                                    placeholder="Ingrese la Contraseña"  data-toggle="tooltip"
+                                                    title="Contraseña del usuario" value="25-10-2024" disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Rol :</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-lock"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='password2'
+                                                    placeholder="Ingrese la Contraseña" aria-label="password2" data-toggle="tooltip"
+                                                    title="Contraseña del usuario" value="Trabajador" disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Empresa:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-building"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected">                                            
+                                                        <option value="1" selected>Kaltire S.A</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Cargo:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user-tie"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected" wire:model='position'>                                                
+                                                        <option value="1">Trabajador</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Estado del Usuario:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-signal"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" 
+                                                    aria-label="password2" value="Usuario sin Activar" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--view user-->
+
+                    <!--edit user-->
+                    <div class="modal fade" id="EditUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="EditUser" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="EditUser">Editar Usuario</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nickname:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico" value="JonRave97">
+                                            </div>
+                                        </div>
+                                
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Rut:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-passport"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='rut'
+                                                    placeholder="Ingrese el rut" aria-label="rut" data-toggle="tooltip"
+                                                    title="Este es el rut del usuario y debera ser unico">
+                                            </div>
+                                        </div>            
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-id-card-clip"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='name'
+                                                    placeholder="Ingrese el Nombre" aria-label="name" data-toggle="tooltip"
+                                                    title="Este es el Nombre del usuario" value="Jonathan">
+                                            </div>
+                                        </div>       
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Apellido:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-id-card-clip"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='lastname'
+                                                    placeholder="Ingrese el Apellido" aria-label="lastname" data-toggle="tooltip"
+                                                    title="Este es el Apellido del usuario" value="Ramos Velasquez">
+                                            </div>
+                                        </div>        
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Email:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-at"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='email'
+                                                    placeholder="Ingrese el Email" aria-label="email" data-toggle="tooltip"
+                                                    title="Este es el email del usuario y debera ser unico" value="jonathan_ramos@kaltire.com">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Password:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-lock"></i>
+                                                </div>
+                                                <input type="password" class="form-control" maxlength="10" wire:model='password'
+                                                    placeholder="Ingrese la Contraseña" aria-label="password" data-toggle="tooltip"
+                                                    title="Contraseña del usuario">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Repetir Password:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-lock"></i>
+                                                </div>
+                                                <input type="password" class="form-control" maxlength="10" wire:model='password2'
+                                                    placeholder="Ingrese la Contraseña" aria-label="password2" data-toggle="tooltip"
+                                                    title="Contraseña del usuario">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Empresa:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-building"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected" wire:model='company'>
+                                                    <option selected>Seleccione la Empresa</option>            
+                                                        <option value="1" selected>Kaltire S.A</option>
+                                                        <option value="2">Kaltire RNG</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Cargo:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user-tie"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected" wire:model='position'>
+                                                    <option selected class="text-gray-500">Seleccione el cargo</option>
+                                                        <option value="1" selected>Administrador</option>
+                                                        <option value="2">Trabajador</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" data-bs-dismiss="modal" onclick="guardar()" class="btn btn-success">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--edit user-->
+                <!-- Modals-->
+            </section>
+        </section>
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>&copy; Derechos resevados a Invepp 2025</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts-->
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const hamBurger = document.querySelector("#toggle-btn");
+        hamBurger.addEventListener("click", function () {
+            let aside = document.querySelector("#sidebar");
+            const icon = document.querySelector("#flechita");
+            aside.classList.toggle("expand");
+            // icon.ClassList.toggle('fa-arrow-right');
+            // icon.classList.toggle('fa-arrow-right');
+        });
+        const tooltipTriggerList = document.querySelectorAll(
+            '[data-bs-toggle="tooltip"]'
+        );
+        const tooltipList = [...tooltipTriggerList].map(
+            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+
+        function guardar()
+        {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Cambios realizados",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+        
+
+    </script>
+</body>
+
+</html>
