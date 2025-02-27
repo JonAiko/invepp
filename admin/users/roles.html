@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Esta es un prototipo de aplicacion de software sobre el control de equipos de proteccion personal">
+    <meta name="author" content="JonRave">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
+    <title>Invepp | Roles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../../css/custom.css" />
+</head>
+
+<body class="wrapper">
+    <div id="sidebar" class="menu expand">
+        <div class="d-flex" style="margin: auto; margin-top: 16px; margin-bottom: 11px">
+            <div class="sidebar-logo">
+                <img src="../../img/logo_sa.png" class="img-fluid img-xl" alt="imagenl logo" />
+            </div>
+        </div>
+        <hr class="sidebar-divider" />
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="../dashboard.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider" />
+            <div class="sidebar-heading">Gestion</div>
+            <li class="sidebar-item ">
+                <a href="users.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Usuarios</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="roles.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-hammer"></i>
+                    <span>Roles</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="bodega.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Bodegas</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="areas.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Areas</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#article" aria-expanded="false" aria-controls="article">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <span>Articulos</span>
+                </a>
+                <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis articulos</a>
+                    </li>
+                </ul>
+                <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#company" aria-expanded="false" aria-controls="company">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Empresa</span>
+                </a>
+                <ul id="company" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item sidebar-edit rounded">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none ">Mis Empresas</a>
+                    </li>
+                </ul>
+            </li>
+            <hr class="sidebar-divider" />
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-link text-decoration-none">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Cerrar Sesion</span>
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <nav class="shadow navbar navbar-expand px-4 py-3 bg-modify-secondary">
+            <button class="toggle-btn" id="toggle-btn" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="nav-item dropdown">
+                        <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
+                            <div class="flex-column">
+                                <span class="mr-2  d-lg-inline text-gray-600 small">Administrador</span>
+                                <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span>
+                                <img src="../../img/profile.svg" class="avatar img-fluid"
+                                    alt="icono de usuario" />
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end rounded dropdown-menu-config"
+                            style="margin-top: 19px">
+                            <li>
+                                <h6 class="dropdown-header">Acciones:</h6>
+                            </li>
+                            <a class="dropdown-item" href="#">Mi perfil</a>
+                            <a class="dropdown-item" href="../../login.html">Cerrar Sesion</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="context px-3 py-4" style="height: 100%">
+            <section class="container-fluid">
+                <div class="mb-3">
+                    <h3 class="fs-4 mb-3">Gestion de Roles</h3>
+                </div>
+                <!--Contenido-->
+                <div class="row">
+                    <div class="col-xl-6 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Total de Roles
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            1
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa-solid fa-user fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Roles Deshabilitados
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa-solid fa-user-xmark fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 pt-5">
+                        <div class="card">
+                            <div class="card-header py-3 d-flex justify-content-between">
+                                <h5 class="m-0 font-weight-bold text-modify-primary">
+                                    Listado de Roles
+                                </h5>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
+                                    <i class="fa-solid fa-plus"> </i> Agregar
+                                </button>
+                            </div>
+                            <div class="card-body py-3 overflow-auto">
+                                <table class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Fecha de Creacion</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Administrador</td>
+                                            <td>25-10-2024</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-warning text-white"
+                                                     data-bs-placement="top"
+                                                    data-bs-title="Modificar datos del usuario" data-bs-toggle="modal" data-bs-target="#EditUser" value="Administrador">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm text-white"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Contenido-->
+                <!-- Modals-->
+                    <!--Add User-->
+                    <div class="modal fade" id="AddUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="AddUser" aria-hidden="true">
+                        <div class="modal-dialog ">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario Registro de Roles</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user-tag"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el nombre del rol" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico">
+                                            </div>
+                                        </div>                    
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Add User-->
+                    <!--edit user-->
+                    <div class="modal fade" id="EditUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="EditUser" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario Edicion de Rol</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico" value="Administrador">
+                                            </div>
+                                        </div>                    
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--edit user-->
+                <!-- Modals-->
+            </section>
+        </section>
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>&copy; Derechos reservados a Invepp 2024</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts-->
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/sweetalert2.js"></script>
+    <script>
+        const hamBurger = document.querySelector("#toggle-btn");
+        hamBurger.addEventListener("click", function () {
+            let aside = document.querySelector("#sidebar");
+            const icon = document.querySelector("#flechita");
+            aside.classList.toggle("expand");
+            // icon.ClassList.toggle('fa-arrow-right');
+            // icon.classList.toggle('fa-arrow-right');
+        });
+        const tooltipTriggerList = document.querySelectorAll(
+            '[data-bs-toggle="tooltip"]'
+        );
+        const tooltipList = [...tooltipTriggerList].map(
+            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+        );
+
+        function guardar()
+        {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Cambios realizados",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+        
+
+    </script>
+</body>
+
+</html>
