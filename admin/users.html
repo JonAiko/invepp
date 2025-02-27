@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Esta es un prototipo de aplicacion de software sobre el control de equipos de proteccion personal">
+    <meta name="author" content="JonRave">
     <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
-    <title>Invepp | Login</title>
+    <title>Invepp | users</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../css/custom.css" />
 </head>
@@ -20,14 +22,14 @@
         <hr class="sidebar-divider" />
         <ul class="sidebar-nav">
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link text-decoration-none">
+                <a href="dashboard.html" class="sidebar-link text-decoration-none">
                     <i class="fa-solid fa-chart-pie"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <hr class="sidebar-divider" />
             <div class="sidebar-heading">Gestion</div>
-            <li class="sidebar-item">
+            <li class="sidebar-item ">
                 <a href="list.html" class="sidebar-link text-decoration-none">
                     <i class="fa-solid fa-user"></i>
                     <span>Usuarios</span>
@@ -53,13 +55,30 @@
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
-                    data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                    data-bs-target="#article" aria-expanded="false" aria-controls="article">
                     <i class="fa-solid fa-boxes-stacked"></i>
                     <span>Articulos</span>
                 </a>
-                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Login</a>
+                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis articulos</a>
+                    </li>
+                </ul>
+                <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#company" aria-expanded="false" aria-controls="company">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Empresa</span>
+                </a>
+                <ul id="company" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item sidebar-edit rounded">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none ">Mis Empresas</a>
                     </li>
                 </ul>
             </li>
@@ -84,8 +103,8 @@
                     <li class="nav-item dropdown">
                         <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
                             <div class="flex-column">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jonathan</span>
+                                <span class="mr-2  d-lg-inline text-gray-600 small">Administrador</span>
+                                <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span>
                                 <img src="../img/profile.svg" class="avatar img-fluid"
                                     alt="icono de usuario" />
                             </div>
