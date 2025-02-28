@@ -7,7 +7,7 @@
     <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
     <meta name="description" content="Esta es un prototipo de aplicacion de software sobre el control de equipos de proteccion personal">
     <meta name="author" content="JonRave">
-    <title>Invepp | Articulos</title>
+    <title>Invepp | Categorias</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../../css/custom.css" />
 </head>
@@ -61,12 +61,12 @@
                 </a>
                 <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis articulos</a>
+                        <a href="articles.html" class="sidebar-link text-decoration-none">Mis articulos</a>
                     </li>
                 </ul>
                 <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
+                        <a href="category.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
                     </li>
                 </ul>
             </li>
@@ -99,63 +99,23 @@
             </button>
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav ms-auto">
-                     <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle position-relative" href="#" id="alertsDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-bell fa-fw"></i>
-                        <!-- Counter - Alerts -->
-                        <span class="position-absolute top-60 start-80 translate-middle badge badge-modify bg-danger">10+</span>
-                        </a>                        
-                        <ul class="dropdown-menu pt-0 pb-0 rounded mt-3 " style="left: auto; right: 0;">
-                            <h6 class="dropdown-header rounded-top bg-md-primary bg-modify ">
-                                Solicitud de Aprobaciones
-                            </h6>
-                            <li class="dropdown-item  d-flex align-items-center" style="border-top:1px solid #ede6e6" href="#">
-                                <div class="m-1 p-2">
-                                    <div class="icon-circle bg-warning">
-                                        <i class="fas fa-bell fa-fw text-white m-0"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="small text-gray-500" style="color: #b9b9be">Diciembre 12 del 2024</div>
-                                    <span class="font-weight-bold">Tienes una nueva aprobacion</span>
-                                </div>
-                            </li>
-                            <li class="dropdown-item  d-flex align-items-center" style="border-top:1px solid #ede6e6" href="#">
-                                <div class="m-1 p-2">
-                                    <div class="icon-circle bg-warning">
-                                        <i class="fas fa-bell fa-fw text-white m-0"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="small text-gray-500" style="color: #b9b9be">Diciembre 12 del 2024</div>
-                                    <span class="font-weight-bold">Tienes una nueva aprobacion</span>
-                                </div>
-                            </li>
-                            <a class="dropdown-item text-center small" style="border-top:1px solid #ede6e6"  href="#">Ver Todas las Solicitudes</a>
-                        </ul>
-                    </li>
                     <div class="topbar-divider d-none d-sm-block"></div>
-                   
                     <li class="nav-item dropdown">
-                        
                         <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
-                            
-                            <div class="flex-column ">
-                                    
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jonathan <span class="mr-2 d-none d-lg-inline text-gray-600 small ">Administrador</span></span>
+                            <div class="flex-column">
+                                <span class="mr-2  d-lg-inline text-gray-600 small">Administrador</span>
+                                <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span>
                                 <img src="../../img/profile.svg" class="avatar img-fluid"
                                     alt="icono de usuario" />
                             </div>
                         </a>
-                        <ul class="dropdown-menu rounded dropdown-menu-config "
-                            style="margin-top: 19px;left: auto; right: 0;" >
+                        <ul class="dropdown-menu dropdown-menu-end rounded dropdown-menu-config"
+                            style="margin-top: 19px">
                             <li>
                                 <h6 class="dropdown-header">Acciones:</h6>
                             </li>
                             <a class="dropdown-item" href="#">Mi perfil</a>
-                            <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                            <a class="dropdown-item" href="../../login.html">Cerrar Sesion</a>
                         </ul>
                     </li>
                 </ul>
@@ -163,15 +123,8 @@
         </nav>
         <section class="context px-3 py-4" style="height: 100%">
             <section class="container-fluid">
-                <div class="d-flex justify-content-between ">
-                    <div class="mb-3">
-                        <h3 class="fs-4 mb-3">Gestion de Articulos</h3>
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
-                            <i class="fa-solid fa-plus"> </i> Agregar
-                        </button>
-                    </div>
+                <div class="mb-3">
+                    <h3 class="fs-4 mb-3">Gestion de Categorias</h3>
                 </div>
                 <!--Contenido-->
                 <div class="row">
@@ -181,14 +134,14 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
-                                            Total de Articulos
+                                            Total de Categorias
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-700">
-                                            54
+                                            22
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fa-solid fa-user fa-2x text-gray-300"></i>
+                                        <i class="fa-solid fa-tag fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -200,14 +153,14 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
-                                            Articulos Deshabilitados
+                                            Categorias Deshabilitadas
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-700">
-                                            33
+                                            3
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                        <i class="fas fa-tag fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -217,60 +170,31 @@
                         <div class="card">
                             <div class="card-header py-3 d-flex justify-content-between">
                                 <h5 class="m-0 font-weight-bold text-modify-primary">
-                                    Listado de Articulos
+                                    Listado de Categorias
                                 </h5>
-                                <!-- <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
                                     <i class="fa-solid fa-plus"> </i> Agregar
-                                </button> -->
+                                </button>
                             </div>
-                            <div class="card-body table-responsive py-3">
-                                <table class="table  overflow-x-auto">
+                            <div class="card-body py-3">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">Codigo</th>
                                             <th scope="col">Nombre</th>
-                                            <th scope="col">Stock</th>
-                                            <th scope="col">Categoria</th>
-                                            <th scope="col">
-                                                Estado
-                                                <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top"
-                                                    data-bs-title="Muestra el estado del articulo"></i>
-                                            </th>
+                                            <th scope="col">Fecha de Creacion</th>
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>RNE000001</td>
-                                            <td>Zapato Tarsus</td>
-                                            <td>Si</td>
-                                            <td>Zapatos</td>    
-                                            <td style="padding-left: 1.5em">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="flexSwitchCheckChecked" checked  onclick="guardar()"/>
-                                                    <label class="form-check-label"
-                                                        for="flexSwitchCheckChecked"></label>
-                                                </div>
-                                            </td>
-                                            <td class="d-flex  gap-1" style="padding-bottom: 1.6em;">
-                                                <button class="btn btn-sm btn-success"
-                                                    data-bs-placement="top"
-                                                    data-bs-title="Ver informacion de usuario" data-bs-toggle="modal" data-bs-target="#ViewUser">
-                                                    <i class="fa-solid fa-eye"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-secondary"                                                   
-                                                    data-bs-placement="top"
-                                                    data-bs-title="Modifcar Persmisos del usuario" >
-                                                    <i class="fa-solid fa-gears"></i>
-                                                </button>
-
+                                            <td>Zapatos</td>
+                                            <td>25-10-2024</td>
+                                            <td>
                                                 <button class="btn btn-sm btn-warning text-white"
                                                      data-bs-placement="top"
-                                                    data-bs-title="Modificar datos del usuario" data-bs-toggle="modal" data-bs-target="#EditUser">
+                                                    data-bs-title="Modificar datos del usuario" data-bs-toggle="modal" data-bs-target="#EditUser" value="Administrador">
                                                     <i class="fa-regular fa-pen-to-square"></i>
                                                 </button>
                                             </td>
@@ -285,91 +209,74 @@
                 <!-- Modals-->
                     <!--Add User-->
                     <div class="modal fade" id="AddUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="AddUser" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
+                        <div class="modal-dialog ">
                             <form class="modal-content" autocomplete="off" wire:submit='store'>
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario Registro de Articulo</h5>
+                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario Registro de Categorias</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">                   
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Codigo:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-ticket"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
-                                                    placeholder="Ingrese el codigo" aria-label="nick" data-toggle="tooltip"
-                                                    title="Este es el nick para ingresar y debera ser unico">
-                                            </div>
-                                        </div>
-                                
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
                                             <label>Nombre:</label>
                                             <div class="input-group">
                                                 <div class="input-group-text">
-                                                    <i class="fa-solid fa-passport"></i>
+                                                    <i class="fa-solid fa-user"></i>
                                                 </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='rut'
-                                                    placeholder="Ingrese el Nombre" aria-label="rut" data-toggle="tooltip"
-                                                    title="Este es el rut del usuario y debera ser unico">
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el Nombre" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico">
                                             </div>
-                                        </div>               
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Precio:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-dollar"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='lastname'
-                                                    placeholder="Ingrese el Precio" aria-label="lastname" data-toggle="tooltip"
-                                                    title="Este es el Apellido del usuario">
-                                            </div>
-                                        </div>  
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Categoria:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <select class="form-select" aria-label="cargo-selected" wire:model='company'>
-                                                    <option selected>Seleccione la Categoria</option>
-                                
-                                                        <option value="1">Zapatos</option>
-                                                        <option value="2">Chaleco</option>
-                                                </select>
-
-                                            </div>
-                                        </div>                         
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <label>Imagen:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-dollar"></i>
-                                                </div>
-                                                <input type="url" class="form-control" wire:model='lastname'
-                                                    placeholder="Ingrese el Precio" aria-label="lastname" data-toggle="tooltip"
-                                                    title="Este es el Apellido del usuario">
-                                            </div>
-                                        </div>                            
+                                        </div>                    
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!--Add User-->
+
+                    <!--edit user-->
+                    <div class="modal fade" id="EditUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="EditUser" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Formulario Edicion de Categoria</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese la Categoria" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico" value="Zapato">
+                                            </div>
+                                        </div>                    
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--edit user-->
                 <!-- Modals-->
             </section>
         </section>
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>&copy; Derechos resevados a Invepp 2025</span>
+                    <span>&copy; Derechos reservados a Invepp 2025</span>
                 </div>
             </div>
         </footer>
