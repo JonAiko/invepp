@@ -61,12 +61,12 @@
                 </a>
                 <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis articulos</a>
+                        <a href="articles.html" class="sidebar-link text-decoration-none">Mis articulos</a>
                     </li>
                 </ul>
                 <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
+                        <a href="category.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
                     </li>
                 </ul>
             </li>
@@ -142,11 +142,14 @@
                         
                         <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
                             
-                            <div class="flex-column ">
-                                    
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jonathan <span class="mr-2 d-none d-lg-inline text-gray-600 small ">Administrador</span></span>
+                            <div class="d-flex flex-row gap-2">
+                             
+                                <div class="flex-column">
+                                    <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span><br>
+                                    <span class="mr-2  d-lg-inline  small" style="color:#5c5a5aa3;font-weight: bold;">Administrador</span>
+                                </div> 
                                 <img src="../../img/profile.svg" class="avatar img-fluid"
-                                    alt="icono de usuario" />
+                                alt="icono de usuario" />
                             </div>
                         </a>
                         <ul class="dropdown-menu rounded dropdown-menu-config "
@@ -256,15 +259,15 @@
                                                         for="flexSwitchCheckChecked"></label>
                                                 </div>
                                             </td>
-                                            <td class="d-flex  gap-1" style="padding-bottom: 1.6em;">
+                                            <td class="d-flex gap-1" style="padding-bottom: 1.6em;">
                                                 <button class="btn btn-sm btn-success"
                                                     data-bs-placement="top"
-                                                    data-bs-title="Ver informacion de usuario" data-bs-toggle="modal" data-bs-target="#ViewUser">
+                                                    data-bs-title="Ver informacion del Articulo">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </button>
                                                 <button class="btn btn-sm btn-secondary"                                                   
                                                     data-bs-placement="top"
-                                                    data-bs-title="Modifcar Persmisos del usuario" >
+                                                    data-bs-title="Modifcar Permisos del Articulo" >
                                                     <i class="fa-solid fa-gears"></i>
                                                 </button>
 
@@ -363,6 +366,7 @@
                         </div>
                     </div>
                     <!--Add User-->
+
                 <!-- Modals-->
             </section>
         </section>
@@ -376,25 +380,12 @@
     </div>
 
     <!-- Scripts-->
+    
     <script src="../../js/popper.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/sidebar.js"></script>
     <script src="../../js/sweetalert2.js"></script>
     <script>
-        const hamBurger = document.querySelector("#toggle-btn");
-        hamBurger.addEventListener("click", function () {
-            let aside = document.querySelector("#sidebar");
-            const icon = document.querySelector("#flechita");
-            aside.classList.toggle("expand");
-            // icon.ClassList.toggle('fa-arrow-right');
-            // icon.classList.toggle('fa-arrow-right');
-        });
-        const tooltipTriggerList = document.querySelectorAll(
-            '[data-bs-toggle="tooltip"]'
-        );
-        const tooltipList = [...tooltipTriggerList].map(
-            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-        );
-
         function guardar()
         {
             Swal.fire({

@@ -99,18 +99,61 @@
             </button>
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav ms-auto">
+                     <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle position-relative" href="#" id="alertsDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell fa-fw"></i>
+                        <!-- Counter - Alerts -->
+                        <span class="position-absolute top-60 start-80 translate-middle badge badge-modify bg-danger">10+</span>
+                        </a>                        
+                        <ul class="dropdown-menu pt-0 pb-0 rounded mt-3 " style="left: auto; right: 0;">
+                            <h6 class="dropdown-header rounded-top bg-md-primary bg-modify ">
+                                Solicitud de Aprobaciones
+                            </h6>
+                            <li class="dropdown-item  d-flex align-items-center" style="border-top:1px solid #ede6e6" href="#">
+                                <div class="m-1 p-2">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-bell fa-fw text-white m-0"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500" style="color: #b9b9be">Diciembre 12 del 2024</div>
+                                    <span class="font-weight-bold">Tienes una nueva aprobacion</span>
+                                </div>
+                            </li>
+                            <li class="dropdown-item  d-flex align-items-center" style="border-top:1px solid #ede6e6" href="#">
+                                <div class="m-1 p-2">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-bell fa-fw text-white m-0"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500" style="color: #b9b9be">Diciembre 12 del 2024</div>
+                                    <span class="font-weight-bold">Tienes una nueva aprobacion</span>
+                                </div>
+                            </li>
+                            <a class="dropdown-item text-center small" style="border-top:1px solid #ede6e6"  href="#">Ver Todas las Solicitudes</a>
+                        </ul>
+                    </li>
                     <div class="topbar-divider d-none d-sm-block"></div>
+                   
                     <li class="nav-item dropdown">
+                        
                         <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
-                            <div class="flex-column">
-                                <span class="mr-2  d-lg-inline text-gray-600 small">Administrador</span>
-                                <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span>
-                                <img src="../img/profile.svg" class="avatar img-fluid"
-                                    alt="icono de usuario" />
+                            
+                            <div class="d-flex flex-row gap-2">
+                             
+                                <div class="flex-column">
+                                    <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span><br>
+                                    <span class="mr-2  d-lg-inline  small" style="color:#5c5a5aa3;font-weight: bold;">Administrador</span>
+                                </div> 
+                                <img src="../../img/profile.svg" class="avatar img-fluid"
+                                alt="icono de usuario" />
                             </div>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end rounded dropdown-menu-config"
-                            style="margin-top: 19px">
+                        <ul class="dropdown-menu rounded dropdown-menu-config "
+                            style="margin-top: 19px;left: auto; right: 0;" >
                             <li>
                                 <h6 class="dropdown-header">Acciones:</h6>
                             </li>
@@ -658,24 +701,11 @@
     </div>
 
     <!-- Scripts-->
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/sweetalert2.js"></script>
+    <script src="../../js/sidebar.js"></script>
     <script>
-        const hamBurger = document.querySelector("#toggle-btn");
-        hamBurger.addEventListener("click", function () {
-            let aside = document.querySelector("#sidebar");
-            const icon = document.querySelector("#flechita");
-            aside.classList.toggle("expand");
-            // icon.ClassList.toggle('fa-arrow-right');
-            // icon.classList.toggle('fa-arrow-right');
-        });
-        const tooltipTriggerList = document.querySelectorAll(
-            '[data-bs-toggle="tooltip"]'
-        );
-        const tooltipList = [...tooltipTriggerList].map(
-            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-        );
 
         function guardar()
         {
