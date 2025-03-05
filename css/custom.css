@@ -12233,4 +12233,25 @@ a.sidebar-link:hover {
   background-color: #FF6900;
 }
 
+/*Animacion del dropdown alert*/
+@keyframes growIn
+{
+  0%
+  {
+    transform: scale(.9);
+  }
+
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animated--grow-in
+{
+  animation-name: growIn;
+  animation-duration: .2s;
+  animation-timing-function: transform cubic-bezier(.18,1.25,.4,1),opacity cubic-bezier(0,1,.4,1);
+}
+
 /*# sourceMappingURL=custom.css.map */
