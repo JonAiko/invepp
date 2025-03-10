@@ -7,7 +7,7 @@
     <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
     <meta name="description" content="Esta es un prototipo de aplicacion de software sobre el control de equipos de proteccion personal">
     <meta name="author" content="JonRave">
-    <title>Invepp | Area</title>
+    <title>Invepp | Solicitudes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../../css/custom.css" />
 </head>
@@ -16,7 +16,7 @@
     <div id="sidebar" class="menu expand">
         <div class="d-flex" style="margin: auto; margin-top: 16px; margin-bottom: 11px">
             <div class="sidebar-logo">
-                <img src="../../img/logo_sa.png" class="img-fluid img-xl" alt="imagenl logo" />
+                <img src="../../img/logo_sa.png" class="img-fluid img-xl" alt="imagen logo" />
             </div>
         </div>
         <hr class="sidebar-divider" />
@@ -173,7 +173,7 @@
         <section class="context px-3 py-4" style="height: 100%">
             <section class="container-fluid">
                 <div class="mb-3">
-                    <h3 class="fs-4 mb-3">Dashboard</h3>
+                    <h3 class="fs-4 mb-3">Solicitudes</h3>
                 </div>
                 <!--Contenido-->
                 <div class="row">
@@ -228,7 +228,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fa-solid fa-calendar-check fa-2x text-gray-300"></i>
+                                        <i class="fa-solid fa-calendar-xmark fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +262,7 @@
                                 </h5>
 
                             </div>
-                            <div class="card-body py-3">
+                            <div class="card-body py-3 overflow-auto">
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -282,11 +282,35 @@
                                             <td>25-10-2024</td>
                                             <td><span class="badge bg-secondary">Pendiente</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-sm btn-success text-white" data-bs-toggle="tooltip" data-bs-title="Ver Solicitud">
+                                                <button type="button" class="btn btn-sm btn-success text-white" >
                                                     <i class="fa-solid fa-eye"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger text-white" data-bs-toggle="tooltip" data-bs-title="Rechazar Solicitud">
+                                                <button type="button" class="btn btn-sm btn-danger text-white" data-bs-toggle="modal" data-bs-target="#rejectApplication">
                                                     <i class="fa-solid fa-ban"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Francisco Fuentes</td>
+                                            <td>OTR REPAIRS PLANT</td>
+                                            <td>25-10-2024</td>
+                                            <td><span class="badge bg-danger">Rechazado</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-success text-white" >
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mirko Ferrada</td>
+                                            <td>OTR REPAIRS PLANT</td>
+                                            <td>25-10-2024</td>
+                                            <td><span class="badge bg-success">Aprobado</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-success text-white" >
+                                                    <i class="fa-solid fa-eye"></i>
                                                 </button>
                                             </td>
                                         </tr>
@@ -308,6 +332,38 @@
             </div>
         </footer>
     </div>
+    <!-- Modal-->
+     <!-- Modal rechazar-->
+     <div class="modal fade" id="rejectApplication" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="rejectApplication" aria-hidden="true">
+        <div class="modal-dialog ">
+            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Motivo de rechazo a Solicitud</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">                   
+                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                            <label>Motivo:</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="fa-solid fa-user-tag"></i>
+                                </div>
+                                <textarea class="form-control" style="text-align: left;" placeholder="Escriba el motivo"></textarea>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal" onclick="guardar()">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+     <!-- Modal rechazar-->
+    <!-- Modal-->
+
 
     <!-- Scripts-->
     <script src="../../js/popper.min.js"></script>
@@ -320,7 +376,7 @@
             Swal.fire({
                 position: "center",
                 icon: "success",
-                title: "Cambios realizados",
+                title: "Se ha enviado",
                 showConfirmButton: false,
                 timer: 1500
               });
