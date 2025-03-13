@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="bodega.html" class="sidebar-link text-decoration-none">
+                <a href="../store/store.html" class="sidebar-link text-decoration-none">
                     <i class="fa-solid fa-warehouse"></i>
                     <span>Bodegas</span>
                 </a>
@@ -61,12 +61,12 @@
                 </a>
                 <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis articulos</a>
+                        <a href="../articles/articles.html" class="sidebar-link text-decoration-none">Mis articulos</a>
                     </li>
                 </ul>
                 <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a href="../../login.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
+                        <a href="../articles/category.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
                     </li>
                 </ul>
             </li>
@@ -166,8 +166,15 @@
         </nav>
         <section class="context px-3 py-4" style="height: 100%">
             <section class="container-fluid">
-                <div class="mb-3">
-                    <h3 class="fs-4 mb-3">Gestion de Usuarios</h3>
+                <div class="d-flex justify-content-between ">
+                    <div class="mb-3">
+                        <h3 class="fs-4 mb-3">Gestion de Usuarios</h3>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
+                            <i class="fa-solid fa-plus"> </i> Agregar
+                        </button>
+                    </div>
                 </div>
                 <!--Contenido-->
                 <div class="row">
@@ -248,21 +255,31 @@
                         </div>
                     </div>
                     <div class="col-12 pt-5">
-                        <div class="card">
-                            <div class="card-header py-3 d-flex justify-content-between">
-                                <h5 class="m-0 font-weight-bold text-modify-primary">
-                                    Listado de Usuarios
-                                </h5>
-                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#AddUser">
-                                    <i class="fa-solid fa-plus"> </i> Agregar
+             
+                        <div class="mb-3">
+                            <h3 class="fs-4 mb-3">Listado de Usuarios</h3>
+                        </div>
+                        <div class="d-flex gap-1 pb-3">
+                            <input type="text" class="form-control" placeholder="Buscar por Nombre, area o cargo">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="fa fa-filter"></i>
                                 </button>
-                            </div>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Habilitados</a></li>
+                                  <li><a class="dropdown-item" href="#">Deshabilitados</a></li>
+                                </ul>
+                              </div>
+                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </div>
+                        <div class="card">
                             <div class="card-body py-3 table-responsive">
                                 <table class="table ">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
                                             <th scope="col">Nombre</th>
+                                            <th scope="col">Apellido</th>
                                             <th scope="col">Empresa</th>
                                             <th scope="col">Area</th>
                                             <th scope="col">Cargo</th>
@@ -279,6 +296,7 @@
                                         <tr>
                                             <th scope="row">1</th>
                                             <td scoope="col" class="">Jonathan</td>
+                                            <td>Ramos Velasquez</td>
                                             <td>Kal Tire S.A</td>
                                             <td>Finance & IT</td>
                                             <td>Asistente TI</td>
@@ -307,6 +325,12 @@
                                                     data-bs-title="Modificar datos del usuario" data-bs-toggle="modal" data-bs-target="#EditUser">
                                                     <i class="fa-regular fa-pen-to-square"></i>
                                                 </button>
+                                                <button class="btn btn-sm btn-primary text-white"
+                                                     data-bs-placement="top"
+                                                    data-bs-title="Modificar datos jefes" data-bs-toggle="modal" data-bs-target="#AprroversUser">
+                                                    <i class="fa-solid fa-user-friends"></i>
+                                                </button>
+
                                             </td>
                                         </tr>
                                     </tbody>
@@ -337,19 +361,7 @@
                                                     placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
                                                     title="Este es el nick para ingresar y debera ser unico">
                                             </div>
-                                        </div>
-                                
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Rut:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-passport"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='rut'
-                                                    placeholder="Ingrese el rut" aria-label="rut" data-toggle="tooltip"
-                                                    title="Este es el rut del usuario y debera ser unico">
-                                            </div>
-                                        </div>            
+                                        </div>           
                                         <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
                                             <label>Nombre:</label>
                                             <div class="input-group">
@@ -372,7 +384,7 @@
                                                     title="Este es el Apellido del usuario">
                                             </div>
                                         </div>        
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
                                             <label>Email:</label>
                                             <div class="input-group">
                                                 <div class="input-group-text">
@@ -439,8 +451,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardar()">Guardar</button>
                                 </div>
                             </form>
                         </div>
@@ -579,19 +591,7 @@
                                                     placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
                                                     title="Este es el nick para ingresar y debera ser unico" value="JonRave97">
                                             </div>
-                                        </div>
-                                
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Rut:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-passport"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='rut'
-                                                    placeholder="Ingrese el rut" aria-label="rut" data-toggle="tooltip"
-                                                    title="Este es el rut del usuario y debera ser unico">
-                                            </div>
-                                        </div>            
+                                        </div>          
                                         <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
                                             <label>Nombre:</label>
                                             <div class="input-group">
@@ -614,7 +614,7 @@
                                                     title="Este es el Apellido del usuario" value="Ramos Velasquez">
                                             </div>
                                         </div>        
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
                                             <label>Email:</label>
                                             <div class="input-group">
                                                 <div class="input-group-text">
@@ -658,7 +658,7 @@
                                                 </div>
                                                 <select class="form-select" aria-label="cargo-selected" wire:model='company'>
                                                     <option selected>Seleccione la Empresa</option>            
-                                                        <option value="1" selected>Kaltire S.A</option>
+                                                        <option value="1" selected class="options">Kaltire S.A</option>
                                                         <option value="2">Kaltire RNG</option>
                                                 </select>
 
@@ -681,13 +681,41 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" data-bs-dismiss="modal" onclick="guardar()" class="btn btn-success">Guardar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" data-bs-dismiss="modal" onclick="guardar()" class="btn btn-primary">Guardar</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <!--edit user-->
+
+                    <!--AprroversUser-->
+                    <div class="modal fade" id="AprroversUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="AprroversUser" aria-hidden="true">
+                        <div class="modal-dialog modal-md">
+                            <form class="modal-content" autocomplete="off">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="AprroversUser">Mis Aprobadores</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" class="form-control" placeholder="Buscar por Nombre o apellido">
+                                    <div class="row py-2">                                        
+                                        <div class="col-12 form-check">
+                                            <div class="text-center border rounded ">
+                                                <input type="checkbox" class="form-check-input" id="check1">
+                                                <label for="check1" class="form-check-label">Juan Perez</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" data-bs-dismiss="modal" onclick="guardar()" class="btn btn-primary">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--AprroversUser-->
                 <!-- Modals-->
             </section>
         </section>

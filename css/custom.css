@@ -2289,9 +2289,9 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
-  border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: rgba(255, 105, 0, 0.3607843137);
+  box-shadow: 0px 0px 9px 1px rgba(255, 105, 0, 0.25);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -3018,7 +3018,7 @@ textarea.form-control-lg {
   --bs-btn-hover-border-color: #0a58ca;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-bg: #000;
   --bs-btn-active-border-color: #0a53be;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
@@ -11975,6 +11975,7 @@ textarea.form-control-lg {
   border-color: #ff7c20;
 }
 
+
 .form-control:focus {
   border-color: rgba(255, 105, 0, 0.3607843137);
   box-shadow: 0px 0px 9px 1px rgba(255, 105, 0, 0.25);
@@ -12213,6 +12214,8 @@ a.sidebar-link:hover {
   margin: 5px;
   padding: 4px;
 }
+
+
 
 .icon-circle {
   height: 2.5rem;
