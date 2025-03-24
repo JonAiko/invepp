@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Esta es un prototipo de aplicacion de software sobre el control de equipos de proteccion personal">
+    <meta name="author" content="JonRave">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico" />
+    <title>Invepp | Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../../css/custom.css" />
+</head>
+
+<body class="wrapper">
+    <div id="sidebar" class="menu expand">
+        <div class="d-flex" style="margin: auto; margin-top: 16px; margin-bottom: 11px">
+            <div class="sidebar-logo">
+                <img src="../../img/logo_sa.png" class="img-fluid img-xl" alt="imagenl logo" />
+            </div>
+        </div>
+        <hr class="sidebar-divider" />
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="../dashboard.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider" />
+            <div class="sidebar-heading">Gestion</div>
+            <li class="sidebar-item ">
+                <a href="users.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Usuarios</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="roles.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-hammer"></i>
+                    <span>Roles</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="../store/store.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>Bodegas</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="areas.html" class="sidebar-link text-decoration-none">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Areas</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#article" aria-expanded="false" aria-controls="article">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <span>Articulos</span>
+                </a>
+                <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="../articles/articles.html" class="sidebar-link text-decoration-none">Mis articulos</a>
+                    </li>
+                </ul>
+                <ul id="article" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="../articles/category.html" class="sidebar-link text-decoration-none">Mis Categorias</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#company" aria-expanded="false" aria-controls="company">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Empresa</span>
+                </a>
+                <ul id="company" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item sidebar-edit rounded">
+                        <a href="../../login.html" class="sidebar-link text-decoration-none ">Mis Empresas</a>
+                    </li>
+                </ul>
+            </li>
+            <hr class="sidebar-divider" />
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="#" class="sidebar-link text-decoration-none">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Cerrar Sesion</span>
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <nav class="shadow navbar navbar-expand px-4 py-3 bg-modify-secondary">
+            <button class="toggle-btn" id="toggle-btn" type="button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav ms-auto">
+                     <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle position-relative" href="#" id="alertsDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell fa-fw"></i>
+                        <!-- Counter - Alerts -->
+                        <span class="position-absolute top-60 start-80 translate-middle badge badge-modify bg-danger">10+</span>
+                        </a>                        
+                        <ul class="dropdown-menu pt-0 pb-0 rounded mt-3 " style="left: auto; right: 0;">
+                            <h6 class="dropdown-header rounded-top bg-md-primary bg-modify ">
+                                Solicitud de Aprobaciones
+                            </h6>
+                            <li class="dropdown-item  d-flex align-items-center" style="border-top:1px solid #ede6e6" href="#">
+                                <div class="m-1 p-2">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-bell fa-fw text-white m-0"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500" style="color: #b9b9be">Diciembre 12 del 2024</div>
+                                    <span class="font-weight-bold">Tienes una nueva aprobacion</span>
+                                </div>
+                            </li>
+                            <li class="dropdown-item  d-flex align-items-center" style="border-top:1px solid #ede6e6" href="#">
+                                <div class="m-1 p-2">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-bell fa-fw text-white m-0"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500" style="color: #b9b9be">Diciembre 12 del 2024</div>
+                                    <span class="font-weight-bold">Tienes una nueva aprobacion</span>
+                                </div>
+                            </li>
+                            <a class="dropdown-item text-center small" style="border-top:1px solid #ede6e6"  href="#">Ver Todas las Solicitudes</a>
+                        </ul>
+                    </li>
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                   
+                    <li class="nav-item dropdown">
+                        
+                        <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 text-decoration-none">
+                            
+                            <div class="d-flex flex-row gap-2">
+                             
+                                <div class="flex-column">
+                                    <span class="mr-2  d-lg-inline text-gray-600 small">Jonathan</span><br>
+                                    <span class="mr-2  d-lg-inline  small" style="color:#5c5a5aa3;font-weight: bold;">Administrador</span>
+                                </div> 
+                                <img src="../../img/profile.svg" class="avatar img-fluid"
+                                alt="icono de usuario" />
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu rounded dropdown-menu-config "
+                            style="margin-top: 19px;left: auto; right: 0;" >
+                            <li>
+                                <h6 class="dropdown-header">Acciones:</h6>
+                            </li>
+                            <a class="dropdown-item" href="#">Mi perfil</a>
+                            <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="context px-3 py-4" style="height: 100%">
+            <section class="container-fluid">
+                <div class="d-flex justify-content-between ">
+                    <div class="mb-3">
+                        <h3 class="fs-4 mb-3">Gestion de Solicitudes</h3>
+                    </div>
+                </div>
+                <!--Contenido-->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Total de Usuarios
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            54
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa-solid fa-user fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Usuarios Confirmados
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Usuarios Inactivos
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            33
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 pulse py-1">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-modify-primary text-uppercase mb-1">
+                                            Usuarios Deshabilitados
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-700">
+                                            40
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-user-secret fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 pt-5">
+             
+                        <div class="mb-3">
+                            <h3 class="fs-4 mb-3">Listado de Solicitudes</h3>
+                        </div>
+                        <div class="d-flex gap-1 pb-3">
+                            <input type="text" class="form-control" placeholder="Buscar por Nombre, area o cargo">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="fa fa-filter"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Habilitados</a></li>
+                                  <li><a class="dropdown-item" href="#">Deshabilitados</a></li>
+                                </ul>
+                              </div>
+                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </div>
+                        <div class="card">
+                            <div class="card-body py-3 table-responsive">
+                                <table class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Codigo</th>
+                                            <th scope="col">Solicitado por:</th>
+
+                                            <th scope="col">Empresa</th>
+                                            <th scope="col">Area</th>
+                                            <th scope="col">Cargo</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <th scope="col">#8383929</th>
+                                            <td scoope="col">Jonathan Ramos Velasquez</td>
+                                            <td>Kal Tire S.A</td>
+                                            <td>Finance & IT</td>
+                                            <td>Asistente TI</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success"
+                                                    data-bs-placement="top"
+                                                    data-bs-title="Ver informacion de usuario" data-bs-toggle="modal" data-bs-target="#ViewUser">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-primary text-white"
+                                                     data-bs-placement="top"
+                                                    data-bs-title="Cancealar Solicitud modo admin" data-bs-toggle="modal" data-bs-target="#Xrequest">
+                                                    <i class="fa-solid fa-cancel"></i>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Contenido-->
+                    <!--view user-->
+                    <div class="modal fade" id="ViewUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="ViewUser" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <form class="modal-content" autocomplete="off" wire:submit='store'>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ViewUser">Detalles del Usuario</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">                   
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nickname:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
+                                                    placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
+                                                    title="Este es el nick para ingresar y debera ser unico" value="JonRave97" disabled>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Nombre:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-id-card-clip"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='name'
+                                                    placeholder="Ingrese el Nombre" aria-label="name" data-toggle="tooltip"
+                                                    title="Este es el Nombre del usuario" value="Jonathan Ramos Velasquez" disabled>
+                                            </div>
+                                        </div>             
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Email:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-at"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='email'
+                                                    placeholder="Ingrese el Email" aria-label="email" data-toggle="tooltip"
+                                                    title="Este es el email del usuario y debera ser unico" value="jonathan_ramos@kaltire.com" disabled>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Fecha de Creacion:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-calendar"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" 
+                                                    placeholder="Ingrese la Contraseña"  data-toggle="tooltip"
+                                                    title="Contraseña del usuario" value="25-10-2024" disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Rol :</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-lock"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" wire:model='password2'
+                                                    placeholder="Ingrese la Contraseña" aria-label="password2" data-toggle="tooltip"
+                                                    title="Contraseña del usuario" value="Trabajador" disabled>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Empresa:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-building"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected">                                            
+                                                        <option value="1" selected>Kaltire S.A</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Cargo:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-user-tie"></i>
+                                                </div>
+                                                <select class="form-select" aria-label="cargo-selected" wire:model='position'>                                                
+                                                        <option value="1">Trabajador</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
+                                            <label>Estado del Usuario:</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i class="fa-solid fa-signal"></i>
+                                                </div>
+                                                <input type="text" class="form-control" maxlength="10" 
+                                                    aria-label="password2" value="Usuario sin Activar" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--view user-->
+
+                    <!--Xrequest-->
+                    <div class="modal fade" id="Xrequest" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="#Xrequest" aria-hidden="true">
+                        <div class="modal-dialog modal-md">
+                            <form class="modal-content" autocomplete="off">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="#Xrequest">Motivo para cancelar Solicitud</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <textarea name="" id="" class="form-control" placeholder="Ingrese el motivo para Cancelar"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-bs-dismiss="modal" onclick="enviar()" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Xrequest-->
+                <!-- Modals-->
+            </section>
+        </section>
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>&copy; Derechos resevados a Invepp 2025</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts-->
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/sweetalert2.js"></script>
+    <script src="../../js/sidebar.js"></script>
+    <script>
+
+        function guardar()
+        {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Cambios realizados",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+        function enviar()
+        {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Enviado",
+                showConfirmButton: false,
+                timer: 1500
+              });
+        }
+        
+
+    </script>
+</body>
+
+</html>
