@@ -168,7 +168,7 @@
             <section class="container-fluid">
                 <div class="d-flex justify-content-between ">
                     <div class="mb-3">
-                        <h3 class="fs-4 mb-3">Gestion de Solicitudes</h3>
+                        <h3 class="fs-4 mb-3">Estado de Solicitude #30000</h3>
                     </div>
                 </div>
                 <!--Contenido-->
@@ -253,138 +253,6 @@
                     </div>
                 </div>
                 <!--Contenido-->
-                    <!--view user-->
-                    <div class="modal fade" id="ViewUser" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="ViewUser" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <form class="modal-content" autocomplete="off" wire:submit='store'>
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="ViewUser">Detalles del Usuario</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">                   
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Nickname:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-user"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='nickname'
-                                                    placeholder="Ingrese el nickname" aria-label="nick" data-toggle="tooltip"
-                                                    title="Este es el nick para ingresar y debera ser unico" value="JonRave97" disabled>
-                                            </div>
-                                        </div>
-                                    
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Nombre:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-id-card-clip"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='name'
-                                                    placeholder="Ingrese el Nombre" aria-label="name" data-toggle="tooltip"
-                                                    title="Este es el Nombre del usuario" value="Jonathan Ramos Velasquez" disabled>
-                                            </div>
-                                        </div>             
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-12">
-                                            <label>Email:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-at"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='email'
-                                                    placeholder="Ingrese el Email" aria-label="email" data-toggle="tooltip"
-                                                    title="Este es el email del usuario y debera ser unico" value="jonathan_ramos@kaltire.com" disabled>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Fecha de Creacion:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-calendar"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" 
-                                                    placeholder="Ingrese la Contraseña"  data-toggle="tooltip"
-                                                    title="Contraseña del usuario" value="25-10-2024" disabled>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Rol :</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-lock"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" wire:model='password2'
-                                                    placeholder="Ingrese la Contraseña" aria-label="password2" data-toggle="tooltip"
-                                                    title="Contraseña del usuario" value="Trabajador" disabled>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Empresa:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-building"></i>
-                                                </div>
-                                                <select class="form-select" aria-label="cargo-selected">                                            
-                                                        <option value="1" selected>Kaltire S.A</option>
-                                                </select>
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Cargo:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-user-tie"></i>
-                                                </div>
-                                                <select class="form-select" aria-label="cargo-selected" wire:model='position'>                                                
-                                                        <option value="1">Trabajador</option>
-                                                </select>
-
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group m-t-20 py-2 col-12 col-sm-12 col-md-12 col-lg-6">
-                                            <label>Estado del Usuario:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">
-                                                    <i class="fa-solid fa-signal"></i>
-                                                </div>
-                                                <input type="text" class="form-control" maxlength="10" 
-                                                    aria-label="password2" value="Usuario sin Activar" disabled>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--view user-->
-
-                    <!--Xrequest-->
-                    <div class="modal fade" id="Xrequest" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="#Xrequest" aria-hidden="true">
-                        <div class="modal-dialog modal-md">
-                            <form class="modal-content" autocomplete="off">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="#Xrequest">Motivo para cancelar Solicitud</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <textarea name="" id="" class="form-control" placeholder="Ingrese el motivo para Cancelar"></textarea>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" data-bs-dismiss="modal" onclick="enviar()" class="btn btn-primary">Enviar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--Xrequest-->
-                <!-- Modals-->
             </section>
         </section>
         <footer class="sticky-footer bg-white">
