@@ -103,9 +103,10 @@
     border-radius: 0.5rem;
   }
   
-  .tracking-item-pending .tracking-content span {
+  .tracking-item-pending .tracking-content span { /*sub titulo*/
     display: block;
     color: #767676;
+    /* color: #f70000; */
     font-size: 13px;
   }
   
@@ -181,15 +182,16 @@
     font-size: 17px;
   }
   
-  .blinker {
-    border: 7px solid #e9f8ea;
+  .blinker { /* borde que parpadea */
+    /* border: 7px solid #e9f8ea; */
+    border: 7px solid #f8eae9d7;
     animation: blink 1s;
     animation-iteration-count: infinite;
   }
   
-  @keyframes blink {
+  @keyframes blink { /* border que ya esta parpadeando*/
     50% {
-      border-color: #fff;
+      border-color: #ff6a0042;
     }
   }
   /*CUSTOM TRACKING EPP*//*# sourceMappingURL=custom.css.map */
