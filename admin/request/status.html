@@ -56,6 +56,21 @@
             </li>
             <li class="sidebar-item">
                 <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
+                    data-bs-target="#company" aria-expanded="false" aria-controls="company">
+                    <i class="fa-solid fa-tasks"></i>
+                    <span>Peticiones</span>
+                </a>
+                <ul id="company" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item sidebar-edit rounded">
+                        <a href="../../admin/request/requests.html" class="sidebar-link text-decoration-none "> Ver Peticiones</a>
+                    </li>
+                    <li class="sidebar-item sidebar-edit rounded">
+                        <a href="../../admin/request/search.html" class="sidebar-link text-decoration-none "> Buscar Peticion</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown text-decoration-none" data-bs-toggle="collapse"
                     data-bs-target="#article" aria-expanded="false" aria-controls="article">
                     <i class="fa-solid fa-boxes-stacked"></i>
                     <span>Articulos</span>
@@ -174,7 +189,13 @@
                 </div>
                 <!--Contenido-->
                 <div class="row">
-                    <div class="col-6 col-xl-12 col-md-12 col-sm-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="requests.html">Peticiones</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Estado</li>
+                        </ol>
+                      </nav>
+                    <div class="col-6 col-xl-6 col-md-12 col-sm-12">
                         <div class="card">
                             <div class="card-body">
                                 <div id="tracking-pre"></div>
